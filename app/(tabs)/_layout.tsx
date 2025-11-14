@@ -1,7 +1,6 @@
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { Tabs } from "expo-router";
-import React from "react";
 import { Image, ImageBackground, Text, View } from "react-native";
 
 const TabIcon = ({ focused, icon, title }: any) => {
@@ -45,7 +44,7 @@ const _Layout = () => {
           height: 52,
           position: "absolute",
           overflow: "hidden",
-          borderWidth: 1,
+          borderWidth: 0,
           borderColor: "#0f0d23",
         },
       }}
@@ -56,9 +55,7 @@ const _Layout = () => {
           headerShown: false,
           title: "Home",
           tabBarIcon: ({ focused }) => (
-            <>
-              <TabIcon focused={focused} icon={icons.home} title="Home" />
-            </>
+            <TabIcon focused={focused} icon={icons.home} title="Home" />
           ),
         }}
       />
@@ -67,11 +64,9 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: "Search",
-          tabBarIcon: ({ focused }) => {
-            <>
-              <TabIcon focused={focused} icon={icons.search} title="Search" />
-            </>;
-          },
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.search} title="Search" />
+          ),
         }}
       />
       <Tabs.Screen
@@ -79,11 +74,9 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: "Saved",
-          tabBarIcon: ({ focused }) => {
-            <>
-              <TabIcon focused={focused} icon={icons.save} title="Saved" />
-            </>;
-          },
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.save} title="Saved" />
+          ),
         }}
       />
       <Tabs.Screen
@@ -91,11 +84,9 @@ const _Layout = () => {
         options={{
           headerShown: false,
           title: "Profile",
-          tabBarIcon: ({ focused }) => {
-            <>
-              <TabIcon focused={focused} icon={icons.person} title="Profile" />
-            </>;
-          },
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.person} title="Profile" />
+          ),
         }}
       />
     </Tabs>
